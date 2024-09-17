@@ -42,11 +42,7 @@ class UserController extends Controller
     }
     public function dashbordpage()
     {
-        if (Auth::check()) {
-            return view('dashboard');
-        } else {
-            return redirect()->route('login');
-        }
+        return view('dashboard');
     }
     public function logout()
     {
